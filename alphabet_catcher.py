@@ -45,7 +45,10 @@ def draw_button(text, x, y, w, h, color):
 def game_over_screen():
     screen.fill(WHITE)
     game_over_text = font.render("Game Over!", True, BLACK)
-    screen.blit(game_over_text, (WIDTH // 2 - 70, HEIGHT // 2 - 50))
+    screen.blit(game_over_text, (WIDTH // 2 - 70, HEIGHT // 2 - 100))
+    
+    final_score_text = font.render(f"Final Score: {score}", True, BLACK)
+    screen.blit(final_score_text, (WIDTH // 2 - 80, HEIGHT // 2 - 50))
     
     draw_button("Restart", WIDTH // 2 - 100, HEIGHT // 2 + 50, 200, 50, GREEN)
     draw_button("Quit", WIDTH // 2 - 100, HEIGHT // 2 + 120, 200, 50, RED)
